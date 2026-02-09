@@ -18,9 +18,10 @@ def main(stdscr):
     curChar = None
     board = [[None] * 4 for _ in range(4)]
     board[0][0] = 2
-    board[2][3] = 3
-    board[0][2] = 10
+    board[2][3] = 2
+    board[0][2] = 2
 
+    drawBoard(stdscr, board)
     while curChar != q:
         direction = handleChar(curChar)
 
