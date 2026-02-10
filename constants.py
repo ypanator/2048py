@@ -1,0 +1,12 @@
+q = ord("q")
+w = ord("w")
+d = ord("d")
+s = ord("s")
+a = ord("a")
+up = 1
+right = 2
+down = 3
+left = 4
+error = 5
+vert = 0
+hori = 1
