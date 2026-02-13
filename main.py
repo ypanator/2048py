@@ -1,15 +1,13 @@
 from curses import wrapper
 from drawBoard import drawBoard
 from handleInput import handleInput
-from calcBoard import calcBoard
+from calcBoard import calcBoard, placeNewNum
 from constants import *
 
 def main(stdscr):
     curChar = None
     board = [[None] * 4 for _ in range(4)]
-    board[0][0] = 2048
-    board[2][3] = 2
-    board[0][2] = 2
+    placeNewNum(board)
 
     drawBoard(stdscr, board)
     while curChar != q:
@@ -24,4 +22,4 @@ def main(stdscr):
         curChar = stdscr.getch()
 
 wrapper(main)
-# https://docs.python.org/3/howto/curses.html
+# https://docs.python.org/3/howto/curses.html``

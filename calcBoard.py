@@ -1,4 +1,8 @@
 from constants import *
+import random
+
+pool = [2] * 9
+pool += [4]
 
 def calcBoard(board, direction):
     vel, axis, xrange, yrange = None, None, None, None
@@ -53,4 +57,10 @@ def calcBoard(board, direction):
             if y != y2 or x != x2:
                 board[y][x] = None
     
-    # TODO: implement placing new num on empty spot
+    placeNewNum(board)
+    
+def placeNewNum(board):
+    emptySpots = [(y, x) for y in range(4) for x in range(4) if board[y][x] is None]
+    newNumSpot = random.choice(emptySpots)
+    newNum = random.choice(pool)
+    board[newNumSpot[0]][newNumSpot[1]] = newNum
