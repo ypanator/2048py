@@ -14,6 +14,8 @@ def main(stdscr):
 
     drawBoard(stdscr, board)
     action = handleInput(stdscr.getch())
+    while action == error:
+        action = handleInput(stdscr.getch())
 
     def resetBoard(stdscr):
         nonlocal state, board, maxNum
