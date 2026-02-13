@@ -7,7 +7,7 @@ def drawBoard(scr, board):
     # window top left is (0, 0)
 
     width = 6
-    y, x = 4, curses.COLS // 2 - 4
+    y, x = 2, curses.COLS // 2 - 4
     scr.addstr(y, x, f"+{"-"*width}+{"-"*width}+{"-"*width}+{"-"*width}+")
     y += 1
     for row in board:
@@ -20,4 +20,14 @@ def drawBoard(scr, board):
         y += 1
         scr.addstr(y, x, f"+{"-"*width}+{"-"*width}+{"-"*width}+{"-"*width}+")
         y += 1
+    y += 1
+    scr.addstr(y, x+12, "W: up")
+    y += 1
+    scr.addstr(y, x, "A: left")
+    scr.addstr(y, x+21, "D: right")
+    y += 1
+    scr.addstr(y, x+11, "S: down")
+    y += 1
+    y += 1
+    scr.addstr(y, x+5, "Q: quit; E: restart")
     scr.refresh()
