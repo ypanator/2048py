@@ -17,17 +17,13 @@ def drawBoard(scr, board):
         num4 = row[3] if row[3] is not None else " "
         scr.addstr(y, x, 
             f"|{num1: ^{width}}|{num2: ^{width}}|{num3: ^{width}}|{num4: ^{width}}|")
-        y += 1
-        scr.addstr(y, x, f"+{"-"*width}+{"-"*width}+{"-"*width}+{"-"*width}+")
-        y += 1
-    y += 1
-    scr.addstr(y, x+12, "W: up")
-    y += 1
-    scr.addstr(y, x, "A: left")
-    scr.addstr(y, x+21, "D: right")
-    y += 1
-    scr.addstr(y, x+11, "S: down")
-    y += 1
-    y += 1
-    scr.addstr(y, x+5, "Q: quit; E: restart")
+        scr.addstr(y+1, x, f"+{"-"*width}+{"-"*width}+{"-"*width}+{"-"*width}+")
+        y += 2
+
+    scr.addstr(y+1, x+12, "W: up")
+    scr.addstr(y+2, x,    "A: left")
+    scr.addstr(y+2, x+21, "D: right")
+    scr.addstr(y+3, x+11, "S: down")
+    scr.addstr(y+5, x+5,  "Q: quit; E: restart")
+
     scr.refresh()

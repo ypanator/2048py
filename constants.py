@@ -1,10 +1,3 @@
-q = ord("q")
-w = ord("w")
-d = ord("d")
-s = ord("s")
-a = ord("a")
-e = ord("e")
-
 up = 0
 right = 1
 down = 2
