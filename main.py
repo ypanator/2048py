@@ -7,7 +7,7 @@ from constants import *
 def main(stdscr):
     curChar = None
     board = [[None] * 4 for _ in range(4)]
-    board[0][0] = 4
+    board[0][0] = 2048
     board[2][3] = 2
     board[0][2] = 2
 
