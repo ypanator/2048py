@@ -57,10 +57,8 @@ def calcBoard(board, direction):
             if y != y2 or x != x2:
                 board[y][x] = None
     
-    placeNewNum(board)
-    
-def placeNewNum(board):
-    emptySpots = [(y, x) for y in range(4) for x in range(4) if board[y][x] is None]
+def placeNewNum(board, emptySpots):
     newNumSpot = random.choice(emptySpots)
     newNum = random.choice(pool)
     board[newNumSpot[0]][newNumSpot[1]] = newNum
+    return newNum
